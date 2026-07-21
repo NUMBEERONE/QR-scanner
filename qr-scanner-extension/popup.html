@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QR Scanner</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="viewfinder">
+    <div class="corner tl"></div>
+    <div class="corner tr"></div>
+    <div class="corner bl"></div>
+    <div class="corner br"></div>
+    <div class="scanline"></div>
+    <h1>QR Scanner</h1>
+    <p class="subtitle">Find every QR code on this page</p>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="scan">Scan</button>
+    <button class="tab" data-tab="history">History</button>
+  </nav>
+
+  <main>
+    <section id="tab-scan" class="tab-panel active">
+      <button id="scanBtn" class="primary-btn">
+        <span class="btn-icon">◎</span> Scan visible page
+      </button>
+      <p class="hint">Or right-click any image on a page and choose
+        <strong>“Scan QR code in this image.”</strong></p>
+
+      <div id="status" class="status"></div>
+      <ul id="results" class="results-list"></ul>
+    </section>
+
+    <section id="tab-history" class="tab-panel">
+      <div class="history-head">
+        <span id="historyCount">0 scans</span>
+        <button id="clearHistory" class="text-btn">Clear all</button>
+      </div>
+      <ul id="historyList" class="results-list"></ul>
+    </section>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>
