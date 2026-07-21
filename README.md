@@ -1,0 +1,2 @@
+# QR-scanner
+extension
